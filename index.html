@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Главная</title>
+
+</head>
+
+<body>
+
+  <div class="page">
+    <header class="header" id="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <h1>Тут я хочу показать, как бы я сделал данную милую штуку</h1>
+      <p>Есть 2 варианта</p>
+      <ul>
+        <li>
+          <button class="btn" id="btnFirst">1 вариант</button>
+        </li>
+        <li id="test">
+          <button class="btn" id="btnSecond">2 вариант</button>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+    <section id="first" class="first">
+  <button class="btn" id="firstBtnBack">Вернуться назад</button>
+  <div class="container">
+    <div class="first__wrapper">
+      <h2 class="title">Так вот, первый вариант:</h2>
+      <input type="number" placeholder="Введи кол-во роз">
+      <span id="someError">В целях безопастности введи значение меньше 200</span>
+      <button class="btn" id="firstMethodStart">Проверить</button>
+    </div>
+  </div>
+  <p id="counts"></p>
+</section>
+    <section class="second" id="second">
+  <div class="container">
+    <div class="second__wrapper">
+      <h2 class="title">И так, второй вариант:</h2>
+      <input type="number" placeholder="Введи кол-во роз" id="fakeInput">
+      <span id="fakeError"></span>
+
+      <button id="fake" class="btn">Проверить</button>
+    </div>
+  </div>
+</section>
+  </div>
+  <script src="assets/js/app.min.js"></script>
+
+</body>
+
+</html>
