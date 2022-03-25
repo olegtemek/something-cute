@@ -1,0 +1,70 @@
+@import 'normalize.scss';
+@import 'var.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+:root{
+  font-size: 16px;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #fa9abf, #83c2da, #9debd8);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  height: 100vh;
+  position: relative;
+}
+
+.container{
+  max-width: #{$maxWidth}px;
+  margin: 0 auto;
+  @media (max-width:#{$maxWidth}px) {
+    max-width: 100%;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.btn{
+    padding: 1.25rem 3.75rem;
+    background-color: $color-pink;
+    color: $color-white;
+    border-radius: 16px;
+    font-weight: $fw-medium;
+    font-family: 'inherit';
+    text-transform: uppercase;
+}
+.title{
+  @include adaptiveProp("font-size",20,40,'max');
+  text-transform: uppercase;
+  font-weight: $fw-bold;
+  padding-bottom: 5rem;
+}
+
+input{
+  padding: 20px 60px;
+      @include adaptiveProp("font-size",16,24,'max');
+      border: 2px solid $color-white;
+      border-radius: 20px;
+      background:$color-pink;
+      color: $color-white;
+      font-weight: $fw-bold;
+      &::placeholder{
+        color: $color-white;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+      }
+}

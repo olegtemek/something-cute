@@ -1,0 +1,47 @@
+.first{
+  position: relative;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(100%);
+  display: none;
+  #firstBtnBack{
+    position: absolute;
+    top: -60px;
+    left: 40px;
+  }
+  &.active{
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    input{
+      &.error{
+        border: 2px solid red;
+      }
+    }
+    span{
+      display: none;
+      color: red;
+      font-size: 1.25rem;
+      &.error{
+        display: block;
+      }
+    }
+    #firstMethodStart{
+      margin-top: 5rem;
+    }
+    margin-bottom: 5rem;
+  }
+  #counts{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    @include adaptiveProp("font-size",20,40,'max');
+  }
+}

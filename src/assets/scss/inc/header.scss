@@ -1,0 +1,54 @@
+.header{
+  @include adaptiveProp("padding-top",20,40,'min');
+  transition: 0.5s;
+  transform: translateY(0%);
+  &.active{
+    transform: translateY(-100%);
+  }
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    h1{
+      @include adaptiveProp("font-size",20,40,'max');
+      text-align: center;
+      font-weight: $fw-medium;
+      line-height: 150%;
+    }
+    p{
+      @include adaptiveProp("padding-top",20,40,'max');
+      @include adaptiveProp("padding-bottom",20,40,'max');
+      @include adaptiveProp("font-size",16,30,'max');
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+    }
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      li{
+        @include adaptiveProp("margin-right",20,60,'max');
+        button{
+          @include adaptiveProp("font-size",16,24,'max');
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      #test{
+        position: relative;
+        span{
+          position: absolute;
+          bottom: -40px;
+          left: 0;
+          font-size: 20px;
+          color: red;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
